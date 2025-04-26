@@ -5,9 +5,12 @@
  * Last updated: 2025-04-23
  * ======================================= */
 'use client';
-
+import styles from '@/styles/components/common/Header.module.scss';
 import { useScrollTrigger } from '@/hooks/useScrollTrigger';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import imageLogo from '@/assets/images/common/kamenokouonsen_logo.webp';
+import Link from 'next/link';
 const Header = () => {
   const { ref, isVisible } = useScrollTrigger();
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +50,58 @@ const Header = () => {
     };
   }, [isOpen]);
 
-  return <header></header>;
+  return (
+    <header className={styles.containerHeader}>
+      <h1>
+        <Image src={imageLogo} alt="亀の甲温泉" />
+      </h1>
+      <nav
+        id="headerNav"
+        className={`${isOpen ? styles['is-open'] : ''} ${
+          !isOpen ? styles.closing : ''
+        }`}
+      >
+        <Link href="/" className={styles.itemLink} onClick={closeMenu}>
+          TOP
+        </Link>
+        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+          家族湯
+        </Link>
+        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+          大浴場
+        </Link>
+        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+          アクセス・料金・営業時間
+        </Link>
+        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+          岡稲荷神社
+        </Link>
+        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+          採用情報
+        </Link>
+      </nav>
+      <div className={styles.boxWorkInfo}>
+        <a href="tel:0968386510">0968-38-6510</a>
+        <div className={styles.wrapTime}>
+          営業時間
+          <time dateTime="T11:00">11:00</time>
+          <time dateTime="T22:00">22:00</time>
+        </div>
+      </div>
+      <button
+        className={`${styles.hamburgerButton} ${
+          isOpen ? styles['is-open'] : ''
+        }`}
+        onClick={toggleMenu}
+        aria-expanded={isOpen}
+        aria-label="メニューを開閉"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+  );
 };
 
 export default Header;

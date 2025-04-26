@@ -1,112 +1,61 @@
 @use "variable" as *;
 @use "svg" as *;
-@use "sass:color";
 
 .containerHeader {
-    position: relative;
-    font-size: inherit;
-    width: 100%;
     display: flex;
-    justify-content: center;
-    padding: 0.8em 2em;
-    @include sp {
-        z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 1.6em;
+    h1 {
+        max-width: 30rem;
     }
-    & > article {
-        max-width: $articleMaxWidth;
+    nav {
+        font-size: inherit;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        @include sp {
-            justify-content: center;
-        }
-        @include pc {
-            opacity: 0;
-            transition: 0.5s ease-out;
-            translate: 0 -5rem;
-            &.is-active {
-                opacity: 1;
-                translate: 0;
-            }
-        }
-        .boxLogo {
-            max-width: 30rem;
+        gap: 0 4em;
+        margin-top: 1em;
+        .itemLink {
+            font-size: FZ(16);
+            letter-spacing: 0.2em;
             transition: 0.3s ease-out;
-            @include sp {
-                width: 65vw;
-            }
-            .itemLogo {
-                width: 100%;
-            }
-            @include hover {
-                opacity: 0.4;
+            @include pc {
+                @include hover {
+                    opacity: 0.4;
+                }
             }
         }
-        nav {
-            position: relative;
+    }
+    .boxWorkInfo {
+        font-size: inherit;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3em 0;
+        margin-top: 0.3em;
+        a {
+            font-size: FZ(16);
+            letter-spacing: 0.2em;
+            &::before {
+                content: "TEL";
+                margin-right: 0.8em;
+            }
+        }
+        .wrapTime {
+            font-size: inherit;
             display: flex;
             align-items: center;
-            gap: 0 2em;
-            font-size: inherit;
-            .itemLink {
+            time {
                 font-size: FZ(16);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                font-weight: 600;
-                letter-spacing: 0.08em;
-                transition: 0.3s ease-out;
-                span {
-                    text-transform: capitalize;
-                }
-                @include hover {
-                    color: color.scale($baseBlack, $alpha: -60%);
-                }
-                @include sp {
-                    color: $baseWhite;
-                    font-size: FZ(18);
-                }
-            }
-            .itemLinkForm {
-                background-color: $baseBlack;
-                color: $baseWhite;
-                font-size: FZ(16);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 0.7em 1em;
-                font-weight: 500;
-                letter-spacing: 0.12em;
-                transition: 0.3s ease-out;
-                @include hover {
-                    background-color: color.scale($baseBlack, $alpha: -60%);
-                    color: $baseBlack;
-                }
-            }
-            @include sp {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                width: 100dvw;
-                height: 100vh;
-                height: 100dvh;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                background-color: rgba(#000, 0.6);
-                gap: 10vw 0;
-                translate: 100vw;
-                transition: 0.3s ease-out;
-                opacity: 0;
-                &.is-open {
-                    translate: 0;
-                    opacity: 1;
-                }
-                &.closing {
-                    translate: 100vw;
-                    transition: 0.5s ease-out;
+                letter-spacing: 0.2em;
+
+                &:first-of-type {
+                    margin-left: 1em;
+                    &::after {
+                        content: "〜";
+                        margin-inline: 0.3em;
+                    }
                 }
             }
         }
