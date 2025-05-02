@@ -1,0 +1,57 @@
+@use "variable" as *;
+@use "mixin" as *;
+@use "svg" as *;
+
+.containerOkainari {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 2em;
+    gap: 5em 0;
+
+    article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: $articleMaxWidth;
+        width: stretch;
+        gap: 2em 0;
+        h2,
+        h3 {
+            font-size: FZ(32);
+            letter-spacing: 0.12em;
+        }
+        .boxImage {
+            position: relative;
+            align-self: flex-end;
+            width: calc(100vw - ((100vw - $articleMaxWidth) / 2));
+            aspect-ratio: 924/437;
+        }
+        p {
+            font-size: FZ(16);
+            letter-spacing: 0.08em;
+            line-height: 1.8em;
+        }
+        .btnLink {
+            align-self: flex-end;
+            @include decoration-btn-link;
+        }
+        .blockYakiimo {
+            position: relative;
+            font-size: inherit;
+            display: flex;
+            margin-left: 5em;
+            gap: 0 2em;
+            margin-top: 3em;
+            .boxImage {
+                max-width: 29rem;
+            }
+            .boxText {
+                font-size: inherit;
+                display: flex;
+                flex-direction: column;
+                gap: 1.6em 0;
+            }
+        }
+    }
+}

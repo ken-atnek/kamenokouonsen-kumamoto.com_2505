@@ -1,0 +1,77 @@
+@use "variable" as *;
+@use "svg" as *;
+
+.containerAppeal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 2em 3em;
+    background-color: #f4f5f7;
+    h2,
+    h3 {
+        font-size: FZ(32);
+        letter-spacing: 0.12em;
+    }
+    article {
+        max-width: $articleMaxWidth;
+        display: flex;
+        flex-direction: column;
+
+        .headText {
+            position: relative;
+            align-self: flex-end;
+            font-size: inherit;
+            margin-top: 0.5em;
+            p {
+                margin-top: 1.6em;
+                font-size: FZ(16);
+                letter-spacing: 0.08em;
+                line-height: 1.8em;
+            }
+        }
+    }
+    .blockDetails {
+        margin-top: 3em;
+        h3 {
+            font-size: FZ(20);
+        }
+        dl {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            font-size: inherit;
+            margin-top: 0.2em;
+            & > div {
+                grid-column: span 2;
+                display: grid;
+                grid-template-columns: subgrid;
+                border-bottom: 1px solid $baseBlack;
+                font-size: inherit;
+                gap: 0 8em;
+                padding-block: 1em;
+                &:first-of-type {
+                    border-top: 1px solid $baseBlack;
+                }
+                dt {
+                    font-size: FZ(14);
+                    letter-spacing: 0.12em;
+                }
+                dd {
+                    font-size: FZ(14);
+                    display: flex;
+                    flex-direction: column;
+                    letter-spacing: 0.12em;
+                    h4 {
+                        font-size: inherit;
+                        letter-spacing: inherit;
+                    }
+                    p {
+                        letter-spacing: inherit;
+                        font-size: inherit;
+                        line-height: 2em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -73,3 +73,16 @@
         }
     }
 }
+
+@mixin decoration-btn-link {
+    color: $baseWhite;
+    background-color: $baseBrown;
+    font-size: FZ(16);
+    padding: 1em 2em;
+    letter-spacing: 0.08em;
+    transition: 0.3s ease-out;
+    @include hover {
+        background-color: $baseWhite;
+        color: $baseBrown;
+    }
+}

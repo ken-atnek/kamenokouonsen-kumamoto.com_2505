@@ -1,0 +1,29 @@
+@use "variable" as *;
+@use "svg" as *;
+.containerSlide {
+    overflow: hidden;
+    width: 100%;
+    .sliderTrack {
+        display: flex;
+        width: max-content;
+        animation: scroll-left 40s linear infinite;
+        .slide {
+            flex-shrink: 0;
+            width: 200px;
+            img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 20/13;
+            }
+        }
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
