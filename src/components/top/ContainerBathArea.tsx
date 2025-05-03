@@ -25,7 +25,7 @@ const ContainerBathArea = () => {
             <Image src={bath02} alt="大浴場画像02" />
           </li>
         </ul>
-        <Link href="#" className={styles.btnLink}>
+        <Link href="/bath/" className={styles.btnLink}>
           詳しく見る
         </Link>
       </article>
@@ -34,7 +34,7 @@ const ContainerBathArea = () => {
         <div>
           <Image src={bath03} alt="大浴場画像03" />
         </div>
-        <Link href="#" className={styles.btnLink}>
+        <Link href="/family-bath/" className={styles.btnLink}>
           詳しく見る
         </Link>
       </article>

@@ -1,6 +1,7 @@
 /* =======================================
  * TOPページ 亀の甲温泉の魅力
  * URL: src/components/top/ContainerAppeal.tsx
+ * Referenced in: src/app/page.tsx
  * Created: 2025-04-27
  * Last updated: 2025-04-27
  * ======================================= */

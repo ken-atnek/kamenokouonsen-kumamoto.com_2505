@@ -5,7 +5,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-block: 1.6em;
+    justify-content: center;
+    height: 20rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: $baseWhite;
     h1 {
         max-width: 30rem;
     }

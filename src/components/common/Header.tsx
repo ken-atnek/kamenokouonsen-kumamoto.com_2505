@@ -64,16 +64,24 @@ const Header = () => {
         <Link href="/" className={styles.itemLink} onClick={closeMenu}>
           TOP
         </Link>
-        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+        <Link
+          href="/family-bath/"
+          className={styles.itemLink}
+          onClick={closeMenu}
+        >
           家族湯
         </Link>
-        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+        <Link href="/bath/" className={styles.itemLink} onClick={closeMenu}>
           大浴場
         </Link>
-        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+        <Link href="/detail/" className={styles.itemLink} onClick={closeMenu}>
           アクセス・料金・営業時間
         </Link>
-        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+        <Link
+          href="/oka-inari-shrine/"
+          className={styles.itemLink}
+          onClick={closeMenu}
+        >
           岡稲荷神社
         </Link>
         <Link href="#" className={styles.itemLink} onClick={closeMenu}>

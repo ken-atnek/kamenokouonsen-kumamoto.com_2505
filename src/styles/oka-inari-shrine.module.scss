@@ -1,0 +1,55 @@
+@use "variable" as *;
+@use "svg" as *;
+
+.containerOkaInari {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 2em;
+    margin-top: 3em;
+    article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: $articleMaxWidth;
+        width: stretch;
+        gap: 2em 0;
+        h3 {
+            font-size: FZ(20);
+            letter-spacing: 0.12em;
+        }
+        .boxImage {
+            position: relative;
+            width: calc(100vw - ((100vw - $articleMaxWidth) / 2));
+            aspect-ratio: 924/437;
+        }
+        p {
+            font-size: FZ(16);
+            letter-spacing: 0.08em;
+            line-height: 1.8em;
+        }
+        &.blockHead {
+            .boxImage {
+                align-self: flex-end;
+            }
+        }
+        &.blockBottom {
+            margin-top: 5em;
+            .boxImage {
+            }
+
+            .boxText {
+                font-size: inherit;
+
+                p {
+                }
+                .wrapImage {
+                    float: right;
+                    max-width: 45rem;
+                    font-size: inherit;
+                    margin-left: 2em;
+                }
+            }
+        }
+    }
+}

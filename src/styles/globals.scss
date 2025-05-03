@@ -28,6 +28,9 @@ main {
     font-size: inherit;
     flex: 1;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20rem;
 }
 section,
 article,

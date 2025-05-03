@@ -32,7 +32,7 @@ const ContainerOkainari = () => {
           <br />
           社殿のある岡山は「岡の森」とよばれ、樫の自然林で覆われ、近年の研究では、もとは森を信仰対象としていたものを、戦国時代に田島を支配した田嶋氏が先祖ゆかりの地に社殿を建てたことから祭神と田嶋氏が混合し「おかんもくじゃ伝説」が生じたとされている。
         </p>
-        <Link href="#" className={styles.btnLink}>
+        <Link href="/oka-inari-shrine/" className={styles.btnLink}>
           詳しく見る
         </Link>
         <div className={styles.blockYakiimo}>

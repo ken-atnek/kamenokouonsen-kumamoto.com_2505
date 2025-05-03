@@ -13,12 +13,12 @@ import ContainerSlide from '@/components/top/ContainerSlide';
 
 export default function Home() {
   return (
-    <main>
+    <>
       <ContainerMovie />
       <ContainerAppeal />
       <ContainerBathArea />
       <ContainerOkainari />
       <ContainerSlide />
-    </main>
+    </>
   );
 }

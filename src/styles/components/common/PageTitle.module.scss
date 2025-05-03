@@ -1,0 +1,32 @@
+@use "variable" as *;
+@use "svg" as *;
+
+.containerPageTitle {
+    background-color: $baseBrown;
+    color: $baseWhite;
+    display: flex;
+    justify-content: center;
+    padding-inline: 2em;
+    article {
+        max-width: $articleMaxWidth;
+        display: flex;
+        justify-content: flex-end;
+        padding: 4.4em 2em 4.4em 0;
+        div {
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.2em 0;
+            h2 {
+                font-size: FZ(28);
+                letter-spacing: 0.12em;
+            }
+            span {
+                font-size: FZ(14);
+                letter-spacing: 0.08em;
+                padding-right: 0.4em;
+            }
+        }
+    }
+}
