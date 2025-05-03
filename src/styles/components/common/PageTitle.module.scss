@@ -7,11 +7,15 @@
     display: flex;
     justify-content: center;
     padding-inline: 2em;
+    @include sp {
+        padding-inline: 4vw;
+    }
     article {
         max-width: $articleMaxWidth;
         display: flex;
         justify-content: flex-end;
         padding: 4.4em 2em 4.4em 0;
+        padding: 6vw 0;
         div {
             font-size: inherit;
             display: flex;
@@ -21,6 +25,9 @@
             h2 {
                 font-size: FZ(28);
                 letter-spacing: 0.12em;
+                @include sp {
+                    font-size: FZ(24);
+                }
             }
             span {
                 font-size: FZ(14);

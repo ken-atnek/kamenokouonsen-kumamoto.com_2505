@@ -6,6 +6,9 @@
     flex-direction: column;
     align-items: center;
     padding: 3em 2em;
+    @include sp {
+        padding: 0;
+    }
     .boxImage {
         max-width: $articleMaxWidth;
     }
@@ -14,8 +17,14 @@
         display: flex;
         flex-direction: column;
         padding: 4em 2em;
+        @include sp {
+            padding: 6vw 4vw;
+        }
         h3 {
             font-size: FZ(28);
+            @include sp {
+                font-size: FZ(24);
+            }
         }
         p {
             font-size: FZ(16);
@@ -23,6 +32,9 @@
             line-height: 1.6em;
             margin-top: 3em;
             margin-bottom: 2em;
+            @include sp {
+                margin-top: 4vw;
+            }
         }
         h4 {
             font-size: FZ(20);
@@ -44,12 +56,19 @@
                 &:first-of-type {
                     border-top: 1px solid $baseBlack;
                 }
+                @include sp {
+                    grid-template-columns: unset;
+                    grid-auto-flow: row;
+                }
                 dt {
                     font-size: FZ(14);
                     padding-left: 1em;
                     letter-spacing: 0.12em;
                     display: grid;
                     place-content: center left;
+                    @include sp {
+                        font-size: FZ(18);
+                    }
                 }
                 dd {
                     font-size: FZ(14);
@@ -57,10 +76,18 @@
                     flex-direction: column;
                     letter-spacing: 0.12em;
                     gap: 0.5em 0;
+                    @include sp {
+                        padding-left: 1em;
+                        font-size: FZ(16);
+                        margin-top: 2vw;
+                    }
                     & > div {
                         font-size: FZ(16);
                         display: flex;
                         gap: 0 1em;
+                        @include sp {
+                            flex-direction: column;
+                        }
                     }
                     p {
                         letter-spacing: inherit;

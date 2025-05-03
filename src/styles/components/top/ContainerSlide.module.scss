@@ -10,6 +10,9 @@
         .slide {
             flex-shrink: 0;
             width: 200px;
+            @include sp {
+                width: 30vw;
+            }
             img {
                 width: 100%;
                 height: auto;

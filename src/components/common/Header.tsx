@@ -38,7 +38,7 @@ const Header = () => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (
         isOpen &&
-        !document.getElementById('headerNav')?.contains(event.target as Node)
+        !document.getElementById('mobileMenu')?.contains(event.target as Node)
       ) {
         closeMenu();
       }
@@ -55,47 +55,49 @@ const Header = () => {
       <h1>
         <Image src={imageLogo} alt="亀の甲温泉" />
       </h1>
-      <nav
-        id="headerNav"
+      <article
+        id="mobileMenu"
         className={`${isOpen ? styles['is-open'] : ''} ${
           !isOpen ? styles.closing : ''
         }`}
       >
-        <Link href="/" className={styles.itemLink} onClick={closeMenu}>
-          TOP
-        </Link>
-        <Link
-          href="/family-bath/"
-          className={styles.itemLink}
-          onClick={closeMenu}
-        >
-          家族湯
-        </Link>
-        <Link href="/bath/" className={styles.itemLink} onClick={closeMenu}>
-          大浴場
-        </Link>
-        <Link href="/detail/" className={styles.itemLink} onClick={closeMenu}>
-          アクセス・料金・営業時間
-        </Link>
-        <Link
-          href="/oka-inari-shrine/"
-          className={styles.itemLink}
-          onClick={closeMenu}
-        >
-          岡稲荷神社
-        </Link>
-        <Link href="#" className={styles.itemLink} onClick={closeMenu}>
-          採用情報
-        </Link>
-      </nav>
-      <div className={styles.boxWorkInfo}>
-        <a href="tel:0968386510">0968-38-6510</a>
-        <div className={styles.wrapTime}>
-          営業時間
-          <time dateTime="T11:00">11:00</time>
-          <time dateTime="T22:00">22:00</time>
+        <nav>
+          <Link href="/" className={styles.itemLink} onClick={closeMenu}>
+            TOP
+          </Link>
+          <Link
+            href="/family-bath/"
+            className={styles.itemLink}
+            onClick={closeMenu}
+          >
+            家族湯
+          </Link>
+          <Link href="/bath/" className={styles.itemLink} onClick={closeMenu}>
+            大浴場
+          </Link>
+          <Link href="/detail/" className={styles.itemLink} onClick={closeMenu}>
+            アクセス・料金・営業時間
+          </Link>
+          <Link
+            href="/oka-inari-shrine/"
+            className={styles.itemLink}
+            onClick={closeMenu}
+          >
+            岡稲荷神社
+          </Link>
+          <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+            採用情報
+          </Link>
+        </nav>
+        <div className={styles.boxWorkInfo}>
+          <a href="tel:0968386510">0968-38-6510</a>
+          <div className={styles.wrapTime}>
+            営業時間
+            <time dateTime="T11:00">11:00</time>
+            <time dateTime="T22:00">22:00</time>
+          </div>
         </div>
-      </div>
+      </article>
       <button
         className={`${styles.hamburgerButton} ${
           isOpen ? styles['is-open'] : ''

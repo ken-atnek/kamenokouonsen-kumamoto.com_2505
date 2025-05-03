@@ -7,6 +7,10 @@
     align-items: center;
     padding: 3em 2em;
     margin-top: 3em;
+    @include sp {
+        padding: 0;
+        margin-top: unset;
+    }
     article {
         position: relative;
         display: flex;
@@ -14,19 +18,32 @@
         max-width: $articleMaxWidth;
         width: stretch;
         gap: 2em 0;
+        @include sp {
+            gap: 4vw;
+        }
         h3 {
             font-size: FZ(20);
             letter-spacing: 0.12em;
+            @include sp {
+                padding-inline: 4vw;
+                font-size: FZ(21);
+            }
         }
         .boxImage {
             position: relative;
             width: calc(100vw - ((100vw - $articleMaxWidth) / 2));
             aspect-ratio: 924/437;
+            @include sp {
+                width: 100%;
+            }
         }
         p {
             font-size: FZ(16);
             letter-spacing: 0.08em;
             line-height: 1.8em;
+            @include sp {
+                padding-inline: 4vw;
+            }
         }
         &.blockHead {
             .boxImage {
@@ -35,19 +52,28 @@
         }
         &.blockBottom {
             margin-top: 5em;
-            .boxImage {
+            @include sp {
+                padding-bottom: 6vw;
+                margin-top: 6vw;
             }
-
             .boxText {
                 font-size: inherit;
-
-                p {
+                @include sp {
+                    display: flex;
+                    flex-direction: column-reverse;
                 }
                 .wrapImage {
                     float: right;
                     max-width: 45rem;
                     font-size: inherit;
                     margin-left: 2em;
+                    @include sp {
+                        max-width: unset;
+                        width: 100%;
+                        margin-left: unset;
+                        padding-inline: 4vw;
+                        margin-top: 4vw;
+                    }
                 }
             }
         }

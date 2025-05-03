@@ -6,6 +6,9 @@
     flex-direction: column;
     align-items: center;
     padding: 2em 2em;
+    @include sp {
+        padding: 6vw 4vw;
+    }
     h3 {
         font-size: FZ(28);
         align-self: center;
@@ -20,6 +23,9 @@
         padding: 0 0;
         margin-top: 4em;
         margin-bottom: 2em;
+        @include sp {
+            margin: 6vw 0 4vw;
+        }
         & > p {
             font-size: FZ(16);
             letter-spacing: 0.12em;
@@ -48,12 +54,19 @@
                 &:first-of-type {
                     border-top: 1px solid $baseBlack;
                 }
+                @include sp {
+                    grid-template-columns: unset;
+                    grid-auto-flow: row;
+                }
                 dt {
                     font-size: FZ(14);
                     padding-left: 1em;
                     letter-spacing: 0.12em;
                     display: grid;
                     place-content: center left;
+                    @include sp {
+                        font-size: FZ(18);
+                    }
                 }
                 dd {
                     font-size: FZ(14);
@@ -61,6 +74,11 @@
                     flex-direction: column;
                     letter-spacing: 0.12em;
                     gap: 0.5em 0;
+                    @include sp {
+                        padding-left: 1em;
+                        font-size: FZ(16);
+                        margin-top: 2vw;
+                    }
                     & > div {
                         font-size: FZ(16);
                         display: flex;
@@ -97,9 +115,15 @@
             align-items: center;
             padding-block: 1em;
             padding-left: 1em;
+            @include sp {
+                flex-wrap: wrap;
+            }
             li {
                 font-size: FZ(14);
                 letter-spacing: 0.12em;
+                @include sp {
+                    font-size: FZ(16);
+                }
                 &:not(:first-of-type) {
                     &::before {
                         content: "/";
@@ -116,16 +140,29 @@
     align-items: center;
     padding: 3em 2em;
     gap: 3em 0;
+    @include sp {
+        padding: 6vw 0;
+        gap: 4vw 0;
+    }
     h3 {
         font-size: FZ(28);
         align-self: center;
+        @include sp {
+            font-size: FZ(24);
+        }
     }
     article {
         max-width: $articleMaxWidth;
         padding-inline: 2em;
+        @include sp {
+            padding-inline: 0;
+        }
         iframe {
             width: 100%;
             aspect-ratio: 16/9;
+            @include sp {
+                aspect-ratio: 1;
+            }
         }
     }
 }

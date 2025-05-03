@@ -31,6 +31,9 @@ main {
     display: flex;
     flex-direction: column;
     padding-top: 20rem;
+    @include sp {
+        padding-top: 15vw;
+    }
 }
 section,
 article,

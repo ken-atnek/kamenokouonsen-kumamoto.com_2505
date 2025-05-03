@@ -7,10 +7,16 @@
     align-items: center;
     padding: 3em 2em 3em;
     background-color: #f4f5f7;
+    @include sp {
+        padding: 6vw 4vw;
+    }
     h2,
     h3 {
         font-size: FZ(32);
         letter-spacing: 0.12em;
+        @include sp {
+            font-size: FZ(24);
+        }
     }
     article {
         max-width: $articleMaxWidth;
@@ -49,18 +55,31 @@
                 font-size: inherit;
                 gap: 0 8em;
                 padding-block: 1em;
+                @include sp {
+                    grid-template-columns: unset;
+                    grid-auto-flow: row;
+                }
                 &:first-of-type {
                     border-top: 1px solid $baseBlack;
                 }
                 dt {
                     font-size: FZ(14);
                     letter-spacing: 0.12em;
+                    padding-left: 1em;
+                    @include sp {
+                        font-size: FZ(18);
+                    }
                 }
                 dd {
                     font-size: FZ(14);
                     display: flex;
                     flex-direction: column;
                     letter-spacing: 0.12em;
+                    @include sp {
+                        padding-left: 1em;
+                        font-size: FZ(16);
+                        margin-top: 2vw;
+                    }
                     h4 {
                         font-size: inherit;
                         letter-spacing: inherit;

@@ -32,6 +32,10 @@ const ContainerAppeal = () => {
         <h3>温泉の効能</h3>
         <dl>
           <div>
+            <dt>温泉湧出地</dt>
+            <dd>菊池市泗水町田島亀甲1773</dd>
+          </div>
+          <div>
             <dt>泉質</dt>
             <dd>
               ナトリウム−炭酸水素塩泉<span>(中性　低張性　低温水)</span>
