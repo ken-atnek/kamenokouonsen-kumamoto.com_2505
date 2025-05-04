@@ -1,6 +1,5 @@
 @use "variable" as *;
 @use "svg" as *;
-
 .containerBath {
     display: flex;
     flex-direction: column;
@@ -81,6 +80,7 @@
                         font-size: FZ(16);
                         margin-top: 2vw;
                     }
+                    /* stylelint-disable-next-line no-descending-specificity */
                     & > div {
                         font-size: FZ(16);
                         display: flex;

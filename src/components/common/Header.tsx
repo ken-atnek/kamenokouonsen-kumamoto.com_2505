@@ -6,13 +6,11 @@
  * ======================================= */
 'use client';
 import styles from '@/styles/components/common/Header.module.scss';
-import { useScrollTrigger } from '@/hooks/useScrollTrigger';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import imageLogo from '@/assets/images/common/kamenokouonsen_logo.webp';
 import Link from 'next/link';
 const Header = () => {
-  const { ref, isVisible } = useScrollTrigger();
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);

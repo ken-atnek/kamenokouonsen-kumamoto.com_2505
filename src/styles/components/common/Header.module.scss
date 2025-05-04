@@ -1,6 +1,5 @@
 @use "variable" as *;
 @use "svg" as *;
-
 .containerHeader {
     display: flex;
     flex-direction: column;
@@ -95,7 +94,6 @@
                 time {
                     font-size: FZ(16);
                     letter-spacing: 0.2em;
-
                     &:first-of-type {
                         margin-left: 1em;
                         &::after {
@@ -128,7 +126,7 @@
         left: 50%;
         width: 60%;
         height: 2px;
-        background-color: #ffffff;
+        background-color: #fff;
         transition: 0.3s ease-out;
         &:nth-of-type(1) {
             translate: -50% calc(-50% - 2vw);

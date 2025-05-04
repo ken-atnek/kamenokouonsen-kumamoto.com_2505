@@ -1,6 +1,5 @@
 @use "variable" as *;
 @use "svg" as *;
-
 .familyBathHead {
     display: flex;
     flex-direction: column;
@@ -20,7 +19,7 @@
         display: flex;
         flex-direction: column;
         max-width: $articleMaxWidth;
-        padding: 2em 2em;
+        padding: 2em;
         gap: 2em 0;
         @include sp {
             padding: 6vw 4vw;
@@ -54,6 +53,9 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 1.6em 0;
+                translate: 0 100%;
+                opacity: 0;
+                transition: 1s cubic-bezier(0, 0.55, 0.45, 1);
                 @include sp {
                     gap: 2vw 0;
                 }
@@ -62,6 +64,18 @@
                     letter-spacing: 0.12em;
                     @include sp {
                         font-size: FZ(18);
+                    }
+                }
+            }
+            &.is-active {
+                figure {
+                    opacity: 1;
+                    translate: 0;
+                    &:nth-of-type(2) {
+                        transition-delay: 0.1s;
+                    }
+                    &:nth-of-type(3) {
+                        transition-delay: 0.2s;
                     }
                 }
             }

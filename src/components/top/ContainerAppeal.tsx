@@ -5,15 +5,28 @@
  * Created: 2025-04-27
  * Last updated: 2025-04-27
  * ======================================= */
-
+'use client';
+import { useScrollTrigger } from '@/hooks/useScrollTrigger';
 import styles from '@/styles/components/top/ContainerAppeal.module.scss';
 
 const ContainerAppeal = () => {
+  const triggerA = useScrollTrigger<HTMLHeadingElement>();
+  const triggerB = useScrollTrigger<HTMLDivElement>();
+  const triggerC = useScrollTrigger<HTMLElement>();
+
   return (
     <section className={styles.containerAppeal}>
       <article>
-        <h2>亀の甲温泉の魅力</h2>
-        <div className={styles.headText}>
+        <h2
+          className={`${styles.slideH2} ${triggerA.isVisible ? styles['is-active'] : ''}`}
+          ref={triggerA.ref}
+        >
+          亀の甲温泉の魅力
+        </h2>
+        <div
+          className={`${styles.headText} ${triggerB.isVisible ? styles['is-active'] : ''}`}
+          ref={triggerB.ref}
+        >
           <h3>七水木温泉郷、美人の湯のひとつ。</h3>
           <p>
             美人の湯として知られる、七水木温泉郷のひとつ。
@@ -28,7 +41,10 @@ const ContainerAppeal = () => {
           </p>
         </div>
       </article>
-      <article className={styles.blockDetails}>
+      <article
+        className={`${styles.blockDetails} ${triggerC.isVisible ? styles['is-active'] : ''}`}
+        ref={triggerC.ref}
+      >
         <h3>温泉の効能</h3>
         <dl>
           <div>

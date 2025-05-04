@@ -5,7 +5,8 @@
  * Created: 2025-04-25
  * Last updated: 2025-04-26
  * ======================================= */
-
+'use client';
+import { useScrollTrigger } from '@/hooks/useScrollTrigger';
 import styles from '@/styles/components/family-bath/FamilyBathHead.module.scss';
 import Image from 'next/image';
 import HeadImage from '@/assets/images/components/family-bath/head-image.webp';
@@ -18,6 +19,8 @@ import bath05 from '@/assets/images/components/family-bath/bath05.webp';
 import bath06 from '@/assets/images/components/family-bath/bath06.webp';
 
 const FamilyBathHead = () => {
+  const triggerA = useScrollTrigger<HTMLDivElement>();
+  const triggerB = useScrollTrigger<HTMLDivElement>();
   return (
     <section className={styles.familyBathHead}>
       <div className={styles.boxHeadImage}>
@@ -31,7 +34,10 @@ const FamilyBathHead = () => {
           <br />
           「さくら」はバリアフリー仕様のお風呂。老若男女、お身体が不自由な方まで皆さんがくつろぎながら、心身ともに癒されるお部屋となっております。
         </p>
-        <div className={styles.photoList}>
+        <div
+          className={`${styles.photoList} ${triggerA.isVisible ? styles['is-active'] : ''}`}
+          ref={triggerA.ref}
+        >
           <figure>
             <Image src={bath01} alt="どんぐり" />
             <figcaption>「どんぐり」</figcaption>
@@ -51,7 +57,10 @@ const FamilyBathHead = () => {
       </div>
       <article>
         <h3>「さくら」（バリアフリー）</h3>
-        <div className={styles.photoList}>
+        <div
+          className={`${styles.photoList} ${triggerB.isVisible ? styles['is-active'] : ''}`}
+          ref={triggerB.ref}
+        >
           <figure>
             <Image src={bath04} alt="どんぐり" />
           </figure>

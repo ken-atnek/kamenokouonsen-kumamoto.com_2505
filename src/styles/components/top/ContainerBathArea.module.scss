@@ -1,7 +1,6 @@
 @use "variable" as *;
 @use "mixin" as *;
 @use "svg" as *;
-
 .containerBathArea {
     display: flex;
     flex-direction: column;
@@ -23,6 +22,9 @@
             font-size: FZ(32);
             letter-spacing: 0.12em;
             color: $baseWhite;
+            opacity: 0;
+            translate: 0 5em;
+            transition: 0.6s cubic-bezier(0, 0.55, 0.45, 1);
         }
         ul {
             display: grid;
@@ -33,9 +35,40 @@
                 grid-template-columns: unset;
                 grid-auto-flow: row;
             }
+            li {
+                opacity: 0;
+                transform: translateY(100%);
+                transition: 1s cubic-bezier(0, 0.55, 0.45, 1);
+            }
         }
         .btnLink {
+            opacity: 0;
+            transform: translateY(10em);
+            transition: 1s cubic-bezier(0, 0.55, 0.45, 1);
             @include decoration-btn-link;
+        }
+        &.is-active {
+            h2 {
+                translate: 0;
+                opacity: 1;
+            }
+            ul {
+                li {
+                    opacity: 1;
+                    transform: translateY(0);
+                    &:nth-last-of-type(1) {
+                        transition-delay: 0.2s;
+                    }
+                    &:nth-last-of-type(2) {
+                        transition-delay: 0.3s;
+                    }
+                }
+            }
+            .btnLink {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0.5s;
+            }
         }
     }
 }

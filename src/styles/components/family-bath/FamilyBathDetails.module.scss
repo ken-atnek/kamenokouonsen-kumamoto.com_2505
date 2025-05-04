@@ -1,6 +1,5 @@
 @use "variable" as *;
 @use "svg" as *;
-
 .familyBathDetails {
     display: flex;
     flex-direction: column;
@@ -70,6 +69,7 @@
                             gap: 0 1em;
                         }
                     }
+                    /* stylelint-disable-next-line no-descending-specificity */
                     & > div {
                         font-size: FZ(16);
                         span {

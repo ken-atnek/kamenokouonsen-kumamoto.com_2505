@@ -6,7 +6,6 @@
  * ======================================= */
 'use client';
 import styles from '@/styles/components/top/ContainerMovie.module.scss';
-import HeadImage from '@/assets/images/components/top/head-mobile.webp';
 import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
 

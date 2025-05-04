@@ -4,7 +4,8 @@
  * Created: 2025-05-02
  * Last updated: 2025-05-02
  * ======================================= */
-
+'use client';
+import { useScrollTrigger } from '@/hooks/useScrollTrigger';
 import styles from '@/styles/components/top/ContainerBathArea.module.scss';
 import Image from 'next/image';
 
@@ -13,9 +14,14 @@ import bath02 from '@/assets/images/components/top/bath02.webp';
 import bath03 from '@/assets/images/components/top/bath03.webp';
 import Link from 'next/link';
 const ContainerBathArea = () => {
+  const triggerA = useScrollTrigger<HTMLElement>();
+  const triggerB = useScrollTrigger<HTMLElement>();
   return (
     <section className={styles.containerBathArea}>
-      <article>
+      <article
+        className={`${triggerA.isVisible ? styles['is-active'] : ''}`}
+        ref={triggerA.ref}
+      >
         <h2>大浴場</h2>
         <ul>
           <li>
@@ -29,7 +35,10 @@ const ContainerBathArea = () => {
           詳しく見る
         </Link>
       </article>
-      <article>
+      <article
+        className={`${triggerB.isVisible ? styles['is-active'] : ''}`}
+        ref={triggerB.ref}
+      >
         <h2>家族湯</h2>
         <div>
           <Image src={bath03} alt="大浴場画像03" />

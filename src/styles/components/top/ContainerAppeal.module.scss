@@ -1,11 +1,10 @@
 @use "variable" as *;
 @use "svg" as *;
-
 .containerAppeal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3em 2em 3em;
+    padding: 3em 2em;
     background-color: #f4f5f7;
     @include sp {
         padding: 6vw 4vw;
@@ -18,16 +17,32 @@
             font-size: FZ(24);
         }
     }
+    .slideH2 {
+        opacity: 0;
+        translate: 95%;
+        transition: 1s cubic-bezier(0, 0.55, 0.45, 1);
+        &.is-active {
+            opacity: 1;
+            translate: 0;
+        }
+    }
     article {
         max-width: $articleMaxWidth;
         display: flex;
         flex-direction: column;
-
         .headText {
             position: relative;
             align-self: flex-end;
             font-size: inherit;
             margin-top: 0.5em;
+            min-height: 5em;
+            opacity: 0;
+            translate: 99%;
+            transition: 1s cubic-bezier(0, 0.55, 0.45, 1);
+            &.is-active {
+                opacity: 1;
+                translate: 0;
+            }
             p {
                 margin-top: 1.6em;
                 font-size: FZ(16);
@@ -38,6 +53,13 @@
     }
     .blockDetails {
         margin-top: 3em;
+        opacity: 0;
+        transition: 1s cubic-bezier(0, 0.55, 0.45, 1) 0.2s;
+        transform: translateX(90%);
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
         h3 {
             font-size: FZ(20);
         }
