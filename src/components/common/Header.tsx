@@ -83,9 +83,9 @@ const Header = () => {
           >
             岡稲荷神社
           </Link>
-          <Link href="#" className={styles.itemLink} onClick={closeMenu}>
+          {/* <Link href="#" className={styles.itemLink} onClick={closeMenu}>
             採用情報
-          </Link>
+          </Link> */}
         </nav>
         <div className={styles.boxWorkInfo}>
           <a href="tel:0968386510">0968-38-6510</a>
