@@ -15,7 +15,7 @@ import Image from 'next/image';
 export default function OkaInariShrine() {
   return (
     <>
-      <PageTitle titleJp="大浴場" titleEn="Oka Inari Shrine" />
+      <PageTitle titleJp="岡稲荷大明神" titleEn="Oka Inari Shrine" />
       <section className={styles.containerOkaInari}>
         <article className={styles.blockHead}>
           <div className={styles.boxImage}>
