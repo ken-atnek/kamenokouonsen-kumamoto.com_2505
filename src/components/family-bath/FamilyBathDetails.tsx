@@ -39,7 +39,7 @@ const FamilyBathDetails = () => {
           </div>
           <div>
             <dt>料金(1室)</dt>
-            <dd>1,200円</dd>
+            <dd>1,500円</dd>
           </div>
           <div>
             <dt>バリアフリー 浴槽</dt>
