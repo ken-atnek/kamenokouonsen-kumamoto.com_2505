@@ -9,7 +9,7 @@ import { useScrollTrigger } from '@/hooks/useScrollTrigger';
 import styles from '@/styles/components/top/ContainerOkainari.module.scss';
 import Image from 'next/image';
 
-import okainari from '@/assets/images/components/top/torii.webp';
+// import okainari from '@/assets/images/components/top/torii.webp';
 import yakiimo from '@/assets/images/components/top/yakiimo.webp';
 import Link from 'next/link';
 const ContainerOkainari = () => {
@@ -24,9 +24,10 @@ const ContainerOkainari = () => {
           ref={triggerA.ref}
         >
           <Image
-            src={okainari}
+            src="/images/torii.webp"
             alt="岡稲荷大明神"
-            fill
+            width={1280}
+            height={600}
             className={styles.itemImage}
           />
         </div>

@@ -1,12 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export const useScrollTrigger = <T extends HTMLElement = HTMLElement>() => {
-  const ref = useRef<T | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [node, setNode] = useState<T | null>(null);
+
+  const ref = useCallback((el: T | null) => {
+    setNode(el);
+  }, []);
 
   useEffect(() => {
-    const target = ref.current;
-    if (!target) return;
+    if (!node) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -16,17 +19,17 @@ export const useScrollTrigger = <T extends HTMLElement = HTMLElement>() => {
       },
       {
         root: null,
-        rootMargin: '0px 0px -100px 0px', // ← 下から100px以内に入ったら発火！
-        threshold: 0, // 要素の "ごく一部" が入ればOK
+        rootMargin: '0px 0px -100px 0px',
+        threshold: 0,
       }
     );
 
-    observer.observe(target);
+    observer.observe(node);
 
     return () => {
-      if (target) observer.unobserve(target);
+      observer.unobserve(node);
     };
-  }, []);
+  }, [node]);
 
   return { ref, isVisible };
 };

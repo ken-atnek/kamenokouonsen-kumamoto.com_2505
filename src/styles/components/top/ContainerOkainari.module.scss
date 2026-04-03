@@ -34,16 +34,21 @@
             align-self: flex-end;
             width: calc(100vw - ((100vw - $articleMaxWidth) / 2));
             aspect-ratio: 924/437;
-            opacity: 0;
-            transition: 1s cubic-bezier(0, 0.55, 0.45, 1);
-            clip-path: inset(0 100% 0 0);
             @include sp {
                 width: 100%;
             }
+            img {
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: 1s cubic-bezier(0, 0.55, 0.45, 1);
+                clip-path: inset(0 100% 0 0);
+            }
             &.is-active {
-                opacity: 1;
-                translate: 0;
-                clip-path: inset(0);
+                img {
+                    opacity: 1;
+                    clip-path: inset(0);
+                }
             }
         }
         .wrapText {
