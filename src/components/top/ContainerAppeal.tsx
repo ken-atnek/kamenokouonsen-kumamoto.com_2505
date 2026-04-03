@@ -16,6 +16,33 @@ const ContainerAppeal = () => {
 
   return (
     <section className={styles.containerAppeal}>
+      <article className={styles.blockNotice}>
+        <div className={styles.innerBlock}>
+          <h4>温泉営業に関するお知らせ</h4>
+          <p>
+            平素より当館の温泉をご利用いただき、誠にありがとうございます。
+            <br />
+            現在、燃料価格の高騰に伴い、当面の間、温泉施設の営業を一部縮小して運営しております。
+            <br />
+            <br />
+            営業内容は以下の通りです。 <br />
+            ・大浴場の露天風呂（男女）を閉鎖
+            <br />
+            ・家族湯は月・水・木・金の間、2棟を閉鎖 <br />
+            ・土曜・日曜は4棟すべて営業
+            <br />
+            <br />
+            なお、全館での通常運営再開時期につきましては、
+            <br className="sp" />
+            現在のところ未定となっております。
+            <br />
+            <br />
+            ご利用のお客様にはご不便をおかけいたしますが、
+            <br className="sp" />
+            何卒ご理解賜りますようお願い申し上げます。
+          </p>
+        </div>
+      </article>
       <article>
         <h2
           className={`${styles.slideH2} ${triggerA.isVisible ? styles['is-active'] : ''}`}

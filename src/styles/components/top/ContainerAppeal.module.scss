@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3em 2em;
+    padding: 1em 2em 3em;
     background-color: #f4f5f7;
     @include sp {
         padding: 6vw 4vw;
@@ -48,6 +48,41 @@
                 font-size: FZ(16);
                 letter-spacing: 0.08em;
                 line-height: 1.8em;
+            }
+        }
+    }
+    .blockNotice {
+        padding: 1em;
+        margin-bottom: 2em;
+        @include sp {
+            padding: 2vw 0;
+            margin-bottom: 4vw;
+        }
+        .innerBlock {
+            background-color: $baseBrown;
+            color: #fff;
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            border-radius: 6px;
+            padding: 2em 3em;
+            @include sp {
+                padding: 6vw 4vw;
+            }
+            h4 {
+                font-size: FZ(28);
+                align-self: center;
+                letter-spacing: 0.04em;
+                @include sp {
+                    font-size: FZ(26);
+                }
+            }
+            p {
+                font-size: FZ(16);
+                letter-spacing: 0.04em;
+                line-height: 1.6em;
+                margin-top: 1em;
+                text-align: justify;
             }
         }
     }
