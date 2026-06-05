@@ -31,6 +31,8 @@ export const metadata: Metadata = {
         '熊本県の菊池市泗水町の泗水温泉、亀の甲温泉です。源泉かけ流しで美人の湯として知られるナトリウム・炭酸水素塩泉で湯上がり後はお肌がツルツルになります。頭痛や冷え性など、多くの効能があります。家族湯もありバリアフリーに対応したお風呂もあります。',
       url: metadataBase?.toString(),
       type: 'website',
+      locale: 'ja_JP',
+      siteName: '亀の甲温泉',
       images: [
         {
           url: './images/ogp.jpg',
@@ -77,6 +79,24 @@ export default function RootLayout({
         <meta
           name="format-detection"
           content="telephone=no, address=no, email=no"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: '亀の甲温泉',
+              url: 'https://kamenokouonsen-kumamoto.com/',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: '菊池市泗水町',
+                addressRegion: '熊本県',
+                addressCountry: 'JP',
+              },
+              openingHours: ['We-Mo 11:00-22:00'],
+            }),
+          }}
         />
       </head>
       <body>

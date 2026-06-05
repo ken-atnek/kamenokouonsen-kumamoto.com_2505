@@ -17,7 +17,7 @@ const PageTitle = ({ titleJp, titleEn }: PageTitleProps) => {
     <section className={styles.containerPageTitle}>
       <article>
         <div>
-          <h2>{titleJp}</h2>
+          <h1>{titleJp}</h1>
           <span>{titleEn}</span>
         </div>
       </article>

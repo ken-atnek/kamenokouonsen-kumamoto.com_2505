@@ -5,8 +5,16 @@
  * Last updated: 2025-05-03
  * ======================================= */
 
+import type { Metadata } from 'next';
 import PageTitle from '@/components/common/PageTitle';
 import styles from '@/styles/bath.module.scss';
+
+export const metadata: Metadata = {
+  title: '大浴場 | 亀の甲温泉',
+  description:
+    '源泉かけ流し・美人の湯。広々とした内湯と露天風呂で、ゆっくり疲れを癒してください。熊本県菊池市泗水町の亀の甲温泉です。',
+  alternates: { canonical: 'https://kamenokouonsen-kumamoto.com/bath/' },
+};
 import Interior01 from '@/assets/images/bath/interior01.webp';
 import Interior02 from '@/assets/images/bath/interior02.webp';
 import Image from 'next/image';

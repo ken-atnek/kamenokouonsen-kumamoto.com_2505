@@ -77,12 +77,43 @@
                     font-size: FZ(26);
                 }
             }
-            p {
+            & > p {
                 font-size: FZ(16);
                 letter-spacing: 0.04em;
                 line-height: 1.6em;
                 margin-top: 1em;
                 text-align: justify;
+            }
+            & > span {
+                text-align: right;
+                margin-top: 0.5em;
+            }
+            dl {
+                position: relative;
+                font-size: inherit;
+                display: flex;
+                flex-direction: column;
+                margin-top: 3rem;
+                gap: 2rem 0;
+                div {
+                    font-size: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    dt {
+                        font-size: FZ(24);
+                    }
+                    dd {
+                        font-size: inherit;
+                        padding-left: 1em;
+                        p {
+                            font-size: FZ(16);
+                            letter-spacing: 0.04em;
+                            em {
+                                font-size: 1.2em;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

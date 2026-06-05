@@ -5,8 +5,16 @@
  * Last updated: 2025-05-03
  * ======================================= */
 
+import type { Metadata } from 'next';
 import PageTitle from '@/components/common/PageTitle';
 import styles from '@/styles/detail.module.scss';
+
+export const metadata: Metadata = {
+  title: 'アクセス・料金・営業時間 | 亀の甲温泉',
+  description:
+    '亀の甲温泉のアクセス・料金・営業時間のご案内。大浴場300円〜、家族湯1,500円。熊本県菊池市泗水町にある源泉かけ流しの温泉です。',
+  alternates: { canonical: 'https://kamenokouonsen-kumamoto.com/detail/' },
+};
 import Image01 from '@/assets/images/detail/image01.webp';
 import Image02 from '@/assets/images/detail/image02.webp';
 import Image from 'next/image';

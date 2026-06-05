@@ -5,8 +5,18 @@
  * Last updated: 2025-05-03
  * ======================================= */
 
+import type { Metadata } from 'next';
 import PageTitle from '@/components/common/PageTitle';
 import styles from '@/styles/oka-inari-shrine.module.scss';
+
+export const metadata: Metadata = {
+  title: '岡稲荷大明神 | 亀の甲温泉',
+  description:
+    '地域を守り続けて500年、岡稲荷大明神。亀の甲温泉から望む菊池台地の小高い丘陵に鎮座する神社です。',
+  alternates: {
+    canonical: 'https://kamenokouonsen-kumamoto.com/oka-inari-shrine/',
+  },
+};
 import Image01 from '@/assets/images/oka-inari-shrine/image01.webp';
 import Image02 from '@/assets/images/oka-inari-shrine/image02.webp';
 import Image03 from '@/assets/images/oka-inari-shrine/image03.webp';
