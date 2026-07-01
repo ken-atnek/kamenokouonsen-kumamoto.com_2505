@@ -99,7 +99,7 @@ export default function Detail() {
               <dt>料金(1人)</dt>
               <dd>
                 <div>
-                  <span>大人（中学生以上）：300円</span>
+                  <span>大人（中学生以上）：400円</span>
                   <span>子ども（小学生）：100円</span>
                   <span>幼児：無料</span>
                 </div>
@@ -116,7 +116,7 @@ export default function Detail() {
             </div>
             <div>
               <dt>回数券</dt>
-              <dd>11枚綴り3,000円</dd>
+              <dd>11枚綴り4,000円</dd>
             </div>
           </dl>
         </article>
